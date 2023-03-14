@@ -32,6 +32,8 @@ class HomeScreen extends StatelessWidget {
                       setState(()=> provider.counter ++);
                     }, icon: const Icon(Icons.add)),
                     PlayButton(
+                      pauseIconColor: Colors.black,
+                      playIconColor: Colors.orange,
                       onPressed: () {
                       },
                     ),
@@ -121,9 +123,9 @@ class _PlayButtonState extends State<PlayButton> with TickerProviderStateMixin {
       child: InkWell(
         onTap: _onToggle,
         child: isPlaying ? Icon(widget.pauseIcon??Icons.pause,color:
-        widget.pauseIconColor?? Colors.black, size: widget.pauseIconSize ?? 25,)  :
+        widget.pauseIconColor?? Colors.red, size: widget.pauseIconSize ?? 25,)  :
         Icon(widget.pauseIcon??Icons.play_arrow,color:
-        widget.pauseIconColor?? Colors.black,size: widget.playIconSize ?? 25),
+        widget.playIconColor?? Colors.blue,size: widget.playIconSize ?? 25),
       ),
     );
   }

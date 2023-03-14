@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inherited_wedget/settings_screen.dart';
 
 import 'counter_provider.dart';
 import 'home_screen.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
     // );
     return CounterProvider(
       child: const MaterialApp(
-        home: HomeScreen(),
+        home: SettingsScreen(),
       ),
     );
   }
