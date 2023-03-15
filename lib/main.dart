@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:inherited_wedget/settings_screen.dart';
 
 import 'counter_provider.dart';
-import 'home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +31,7 @@ class MyApp extends StatelessWidget {
     // );
     return CounterProvider(
       child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: SettingsScreen(),
       ),
     );
